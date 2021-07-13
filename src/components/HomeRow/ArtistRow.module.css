@@ -1,0 +1,32 @@
+.ArtistRow {
+  padding: 1rem;
+  /* background-color: rgba(0, 0, 0, 0.952); */
+  color: white;
+}
+.ArtistRow h1 {
+  text-transform: capitalize;
+  margin: 0.5rem 0rem;
+}
+
+.ArtistRowItem {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+  gap: 20px;
+}
+@media (max-width: 700px) {
+  .ArtistRowItem {
+    position: relative;
+    grid-template-columns: none;
+    grid-template-rows: 230px;
+    overflow-x: auto;
+  }
+  .ArtistRowItem::-webkit-scrollbar {
+    width: 0;
+  }
+}
+@media (max-width: 325px) {
+  .ArtistRowItem {
+    grid-template-rows: 200px;
+  }
+}

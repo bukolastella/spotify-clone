@@ -1,0 +1,129 @@
+.Nav {
+  background-color: rgba(0, 0, 0, 0.863);
+  padding: 1.3rem 2rem;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 2fr 2fr;
+  align-items: center;
+}
+.NavLogo {
+  text-transform: capitalize;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.NavLogoIcon {
+  margin-right: 0.5rem;
+}
+.NavArrow {
+  font-size: 2rem;
+  display: flex;
+}
+.NavArrow div:nth-child(1) {
+  margin-right: 2rem;
+}
+
+.NavArrow div {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(34, 34, 34, 0.623);
+  font-size: 1rem;
+  color: gray;
+  cursor: pointer;
+}
+@media (hover: hover) and (pointer: fine) {
+  .NavArrow div:hover {
+    background-color: rgba(54, 54, 54, 0.623);
+  }
+}
+
+.NavForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.NavForm span {
+  height: 80%;
+  width: 50px;
+  padding: 0.8rem;
+  padding-right: 0rem;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.NavForm input {
+  width: 50%;
+  height: 80%;
+  border-radius: 30px;
+  outline: none;
+  border: none;
+  border-top-left-radius: 0rem;
+  border-bottom-left-radius: 0rem;
+  padding: 0.8rem;
+  font-size: 0.9rem;
+}
+@media (max-width: 800px) {
+  .Nav {
+    grid-template-columns: 1fr 1fr 2fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .Nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .NavArrow {
+    font-size: 1rem;
+  }
+  .NavArrow div {
+    width: 30px;
+    height: 30px;
+  }
+  .NavArrow div:nth-child(1) {
+    margin: 0rem 0.3rem;
+  }
+  .NavArrow div:nth-child(2) {
+    display: none;
+  }
+  .NavLogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .Nav {
+    padding: 1rem;
+  }
+
+  .NavForm span {
+    padding: 0.5rem;
+    padding-right: 0rem;
+  }
+
+  .NavForm input {
+    padding: 0.5rem;
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .NavLogo {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 330px) {
+  .Nav {
+    padding: 0.6rem;
+  }
+}

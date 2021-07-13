@@ -1,0 +1,27 @@
+.Search {
+  /* background-color: rgba(0, 0, 0, 0.952); */
+  padding: 1rem;
+}
+.SearchHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: capitalize;
+  padding: 1rem;
+  color: white;
+}
+.SearchHeader span {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-right: 2rem;
+  color: gray;
+  cursor: pointer;
+}
+@media (max-width: 450px) {
+  .SearchHeader {
+    padding: 1rem 0rem;
+  }
+  .SearchHeader span {
+    margin-right: 1rem;
+  }
+}

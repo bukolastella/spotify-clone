@@ -1,0 +1,98 @@
+.HomeItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  background: #181818;
+  color: white;
+  padding: 1rem;
+  border-radius: 5px;
+  position: relative;
+  transition: 0.5s ease-in-out;
+}
+.HomeItemImg {
+  height: 80%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+.HomeItemImg img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.HomeItemTitle {
+  text-transform: capitalize;
+  text-align: left;
+  width: 100%;
+}
+.HomeItemPlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  top: 0;
+  border-radius: 5px;
+}
+@media (hover: hover) and (pointer: fine) {
+  .HomeItem:hover {
+    background-color: rgb(41, 41, 41);
+  }
+  .HomeItem:hover > .HomeItemPlay span {
+    display: flex;
+    transition: 0.5s ease-in;
+    transform: translateY(-10px);
+    animation-name: example;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    top: 55%;
+    transition: transform 0.5s ease-in-out;
+  }
+}
+@keyframes example {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.HomeItemPlay span {
+  background-color: rgb(42, 117, 42);
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: absolute;
+  top: 55%;
+  opacity: 0;
+  transform: translateY(10px);
+  right: 30px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.HomeItemPlay span i {
+  color: white;
+}
+@media (max-width: 700px) {
+  .HomeItem {
+    position: absolute;
+    height: 100%;
+    width: 270px;
+  }
+  .HomeItemImg img {
+    object-fit: cover;
+  }
+}
+@media (max-width: 325px) {
+  .HomeItem {
+    width: 200px;
+  }
+}
