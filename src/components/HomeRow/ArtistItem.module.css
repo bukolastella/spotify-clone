@@ -29,7 +29,7 @@
   text-transform: capitalize;
   text-align: center;
 }
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .ArtistItem {
     position: absolute;
     height: 100%;

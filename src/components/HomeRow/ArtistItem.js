@@ -1,24 +1,34 @@
 import React from "react";
 import classes from "./ArtistItem.module.css";
 import useResize from "../../hooks/use-resize";
+import { useSelector } from "react-redux";
+import HomeSkeleton from "../../skeleton/HomeSkeleton";
 
 const ArtistItem = (props) => {
+  const loadingState = useSelector((state) => state.home.loadingState);
   const { resizeState } = useResize();
 
   return (
-    <div
-      className={classes.ArtistItem}
-      style={resizeState ? props.style : null}
-    >
-      <div className={classes.ArtistItemImg}>
-        <img
-          src="https://i.scdn.co/image/ab6761610000e5eb7422fa2e9ce4b66a733c5476"
-          alt="song cover"
-        />
+    <>
+      <div
+        className={classes.ArtistItem}
+        style={resizeState ? props.style : null}
+      >
+        {loadingState && <HomeSkeleton />}
+
+        {!loadingState && (
+          <>
+            <div className={classes.ArtistItemImg}>
+              <img src={props.data.artistPic} alt="song cover" />
+            </div>
+            <h3>{props.data.artist}</h3>
+            <span>
+              {Math.floor(Number(props.data.id) / 15).toLocaleString("en-us")}
+            </span>{" "}
+          </>
+        )}
       </div>
-      <h3>davido</h3>
-      <span>308,934 followers</span>
-    </div>
+    </>
   );
 };
 

@@ -1,0 +1,317 @@
+.Audio {
+  width: 100%;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  color: white;
+  border-top: 1px solid rgba(128, 128, 128, 0.603);
+}
+
+/*  */
+.player {
+  width: 100%;
+  height: 100px;
+  background: #181818;
+  display: grid;
+  grid-template-columns: 180px 2fr 180px;
+  /* background-color: saddlebrown; */
+  border-radius: 2px;
+  padding: 1rem 1rem;
+}
+.picLeft {
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.imgSpan {
+  width: 70px;
+  height: 100%;
+  margin-right: 0.3rem;
+}
+.imgSpan img {
+  object-fit: cover;
+  width: 70px;
+  height: 100%;
+  align-self: center;
+}
+.info {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  /* width: 50%; */
+  /* padding: 0 16px; */
+}
+.info .name {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.singer {
+  font-size: 0.7rem;
+  color: gray;
+}
+.btns {
+  /* background-color: seagreen; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.btns input {
+  width: 100%;
+}
+.play-pause i {
+  cursor: pointer;
+}
+.seekSlider {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.seekSlider span {
+  margin: 0rem 1rem;
+  color: gray;
+}
+.seekSlider input {
+  /* height: 3px; */
+  /* cursor: pointer; */
+}
+
+/* .progress {
+  height: 10px;
+  background-color: #00a8ff;
+} */
+
+.volume {
+  /* background-color: aquamarine; */
+  align-self: center;
+  justify-self: flex-end;
+  position: relative;
+}
+
+.volume i {
+  color: gray;
+  margin-right: 0.5rem;
+  position: absolute;
+  bottom: -3px;
+  left: -30px;
+}
+.volume input {
+  height: 4px;
+  -webkit-appearance: none;
+  background: linear-gradient(
+    to right,
+    rgba(7, 236, 7, 0.677) 0%,
+    rgba(7, 236, 7, 0.677) 55%,
+    gray 55%,
+    gray 100%
+  );
+}
+/* Styling the seek slider */
+.seekSlider input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+}
+
+.seekSlider input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+.seekSlider input[type="range"]:focus {
+  outline: none;
+}
+
+.seekSlider input[type="range"]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+.seekSlider input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+  margin-top: -6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  /* display: none; */
+}
+.seekSlider input[type="range"]:hover::-webkit-slider-thumb {
+  display: block;
+}
+
+/* All the same stuff for Firefox */
+.seekSlider input[type="range"]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+/* All the same stuff for IE */
+.seekSlider input[type="range"]::-ms-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+}
+/*  */
+.seekSlider input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  /* background: gray; */
+  border-radius: 5px;
+}
+
+.seekSlider input[type="range"]:focus::-webkit-slider-runnable-track {
+  /* background-color: white; */
+}
+
+.seekSlider input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  background: gray;
+  border-radius: 5px;
+}
+
+.seekSlider input[type="range"]::-ms-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  background: gray;
+  border-radius: 5px;
+}
+/*  */
+.volume input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+.volume input[type="range"]:focus {
+  outline: none;
+}
+
+.volume input[type="range"]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+.volume input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+  /* margin-top: -3px; */
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+
+/* All the same stuff for Firefox */
+.volume input[type="range"]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+/* All the same stuff for IE */
+.volume input[type="range"]::-ms-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+}
+/*  */
+/*  */
+/* .volume input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  background: gray;
+  border-radius: 5px;
+}
+
+.volume input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  background: gray;
+  border-radius: 5px;
+}
+
+.volume input[type="range"]::-ms-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  background: gray;
+  border-radius: 5px;
+} */
+@media (max-width: 801px) {
+  .seekSlider {
+    position: absolute;
+    top: 0px;
+    left: 0;
+  }
+  .seekSlider span {
+    margin: 0rem 0.5rem;
+    color: gray;
+  }
+  .Audio {
+    height: 130px;
+  }
+  .player {
+    grid-template-columns: 2fr 1fr 30px;
+    /* grid-template-rows: auto auto; */
+    padding: 0.5rem;
+    padding-top: 2rem;
+    position: relative;
+    height: 100%;
+  }
+  .picLeft {
+    grid-column: 1/2;
+    grid-row: 1/-1;
+    justify-content: center;
+  }
+  .info {
+    margin-left: 1rem;
+  }
+  .btns {
+    justify-content: center;
+  }
+  .play-pause {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+
+  .volume {
+    grid-column: 3/-1;
+    width: 80px;
+    justify-self: center;
+    transform: rotate(-90deg);
+  }
+  .volume input {
+    width: 100%;
+  }
+  .volume i {
+    display: none;
+  }
+}

@@ -6,20 +6,21 @@
 }
 .HomeRow h1 {
   text-transform: capitalize;
-  margin: 0.3rem 0rem;
+  margin: 1rem 0rem;
 }
 
 .HomeRowItem {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
   gap: 20px;
 }
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .HomeRowItem {
     position: relative;
-    /* grid-template-columns: none; */
+    /* grid-template-columns: repeat(5, auto); */
     padding: 0;
-    grid-template-rows: 270px;
+    grid-template-rows: 330px;
     overflow-y: hidden;
     overflow-x: auto;
   }
@@ -29,6 +30,6 @@
 }
 @media (max-width: 325px) {
   .HomeRowItem {
-    grid-template-rows: 240px;
+    grid-template-rows: 290px;
   }
 }

@@ -14,10 +14,10 @@
   grid-template-rows: 1fr;
   gap: 20px;
 }
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .ArtistRowItem {
     position: relative;
-    grid-template-columns: none;
+    /* grid-template-columns: none; */
     grid-template-rows: 230px;
     overflow-x: auto;
   }
