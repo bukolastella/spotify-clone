@@ -28,10 +28,10 @@ const Nav = () => {
       </div>
 
       <div className={classes.NavArrow}>
-        <div>
+        <div onClick={window.history.back()}>
           <i className="fas fa-chevron-left"></i>
         </div>
-        <div>
+        <div onClick={window.history.forward()}>
           <i className="fas fa-chevron-right"></i>
         </div>
       </div>
