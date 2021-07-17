@@ -6,19 +6,20 @@ import { Route, Switch, Redirect } from "react-router-dom";
 
 function App() {
   return (
-    <div className={classes.App}>
-      <Switch>
-        <Route path="/" exact>
-          <Home />
-        </Route>
-        {/* <Route path="/search/:query" exact>
+    <HashRouter basename="/">
+      <div className={classes.App}>
+        <Switch>
+          <Route path="/" exact>
+            <Home />
+          </Route>
+          {/* <Route path="/search/:query" exact>
           <Search />
         </Route> */}
-        <Route path={`/search/:query`}>
-          <Tracks />
-        </Route>
-        <Route path="*">
-          {/* <p
+          <Route path={`/search/:query`}>
+            <Tracks />
+          </Route>
+          <Route path="*">
+            {/* <p
             style={{
               color: "white",
               textAlign: "center",
@@ -29,10 +30,11 @@ function App() {
           >
             Page not found
           </p> */}
-          <Redirect to="/" />
-        </Route>
-      </Switch>
-    </div>
+            <Redirect to="/" />
+          </Route>
+        </Switch>
+      </div>
+    </HashRouter>
   );
 }
 

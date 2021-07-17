@@ -29,9 +29,8 @@ const Tracks = () => {
         {
           method: "GET",
           headers: {
-            "x-rapidapi-key":
-              "821b2eba4emsh6441e67b3375bd7p190413jsn23c6b91f6667",
-            "x-rapidapi-host": "unsa-unofficial-spotify-api.p.rapidapi.com",
+            "x-rapidapi-key": process.env.REACT_KEY,
+            "x-rapidapi-host": process.env.REACT_HOST,
           },
         }
       );
