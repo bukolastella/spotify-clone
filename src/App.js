@@ -2,7 +2,7 @@ import Home from "./pages/Home";
 // import Search from "./pages/Search";
 import Tracks from "./pages/Tracks";
 import classes from "./App.module.css";
-import { Route, Switch, Redirect } from "react-router-dom";
+import { Route, Switch, Redirect, HashRouter } from "react-router-dom";
 
 function App() {
   return (
