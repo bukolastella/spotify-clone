@@ -1,21 +1,27 @@
 import React from "react";
 import classes from "./TrackRow.module.css";
+import { audioActions } from "../../store/audio-slice";
+import { useDispatch } from "react-redux";
 
-const TrackRow = () => {
+const TrackRow = (props) => {
+  const dispatch = useDispatch();
+
+  const trackPlayHandler = () => {
+    dispatch(audioActions.currentMusic(props.data));
+  };
   return (
-    <div className={classes.TrackRow}>
-      <span className={classes.TrackRowNo}>1</span>
+    <div className={classes.TrackRow} onClick={trackPlayHandler}>
+      <span className={classes.TrackRowNo}>
+        <i className="fas fa-play"></i>
+      </span>
       <span className={classes.TrackRowImg}>
-        <img
-          src="https://i.scdn.co/image/ab67616d0000b273caf82abb2338880577e472be"
-          alt="song cover"
-        />
+        <img src={props.data.songPic} alt="song cover" />
       </span>
       <div className={classes.TrackRowTitle}>
-        <h3>jealous</h3>
-        <span>fire</span>
+        <h3>{props.data.songTitle}</h3>
+        <span>{props.data.artist}</span>
       </div>
-      <span className={classes.TrackRowAlbum}>sour</span>
+      <span className={classes.TrackRowAlbum}>{props.data.album}</span>
       <span className={classes.TrackRowTime}>0.30</span>
     </div>
   );

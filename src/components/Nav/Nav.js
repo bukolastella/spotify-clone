@@ -1,7 +1,23 @@
 import React from "react";
+import { useState } from "react";
+import { useHistory } from "react-router-dom";
 import classes from "./Nav.module.css";
 
 const Nav = () => {
+  const [inputState, setInputState] = useState("");
+  const [inputErrorState, setInputErrorState] = useState(false);
+  const history = useHistory();
+  const submitHandler = (event) => {
+    event.preventDefault();
+    if (inputState === " ") {
+      console.log(inputState);
+      setInputState("");
+      setInputErrorState(true);
+      return;
+    }
+    setInputErrorState(false);
+    history.push(`/search/${inputState}/tracks`);
+  };
   return (
     <div className={classes.Nav}>
       <div className={classes.NavLogo}>
@@ -20,11 +36,19 @@ const Nav = () => {
         </div>
       </div>
 
-      <form className={classes.NavForm}>
-        <span>
+      <form className={classes.NavForm} onSubmit={submitHandler}>
+        <span onClick={submitHandler}>
           <i className="fas fa-search"></i>
         </span>
-        <input type="text" placeholder="Artists, songs or podcasts" />
+        <input
+          type="text"
+          placeholder="Artists, songs or podcasts"
+          value={inputState}
+          onChange={(ev) => setInputState(ev.target.value)}
+          style={{
+            backgroundColor: inputErrorState ? "#ffdddd" : null,
+          }}
+        />
       </form>
     </div>
   );

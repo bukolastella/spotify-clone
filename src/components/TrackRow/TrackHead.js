@@ -1,10 +1,10 @@
 import React from "react";
 import classes from "./TrackHead.module.css";
 
-const TrackHead = () => {
+const TrackHead = (props) => {
   return (
     <div className={classes.TrackHead}>
-      <h3>All songs for "jealous"</h3>
+      <h3>All songs for "{props.query}"</h3>
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import Home from "./pages/Home";
-import Search from "./pages/Search";
+// import Search from "./pages/Search";
 import Tracks from "./pages/Tracks";
 import classes from "./App.module.css";
 import { Route, Switch, Redirect } from "react-router-dom";
@@ -11,10 +11,10 @@ function App() {
         <Route path="/" exact>
           <Home />
         </Route>
-        <Route path="/search" exact>
+        {/* <Route path="/search/:query" exact>
           <Search />
-        </Route>
-        <Route path={`/search/:query/tracks`}>
+        </Route> */}
+        <Route path={`/search/:query`}>
           <Tracks />
         </Route>
         <Route path="*">

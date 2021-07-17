@@ -28,6 +28,11 @@
   justify-content: space-evenly;
   align-items: left;
   flex-direction: column;
+  width: 100%;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .TrackRowTitle h3 {
@@ -35,11 +40,31 @@
   font-size: 1.4rem;
   color: white;
   font-weight: normal;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  white-space: unset;
+  word-break: break-all;
 }
 
 .TrackRowTitle span {
   text-transform: capitalize;
   font-size: 1.1rem;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  white-space: unset;
+  word-break: break-all;
+}
+.TrackRowAlbum {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  white-space: unset;
+  word-break: break-all;
 }
 .TrackRowNo {
   justify-self: center;
@@ -69,7 +94,7 @@
     grid-template-rows: 40px;
   }
   .TrackRowTitle h3 {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   .TrackRowTitle span {
     font-size: 0.9rem;

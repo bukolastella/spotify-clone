@@ -3,12 +3,12 @@ import classes from "./Audio.module.css";
 import { useSelector } from "react-redux";
 import Loader from "../../ui/Loader";
 
-const AudioPlayer = () => {
+const AudioPlayer = (props) => {
   const musicState = useSelector((state) => state.audio.audioData);
   const loadingState = useSelector((state) => state.home.loadingState);
   const [audio, setAudio] = useState(new Audio(`${musicState.preview_url}`));
   const [playing, setPlaying] = useState(false);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(props.display ? props.display : true);
   const [progress, setProgress] = useState("0");
   const [mute, setMute] = useState(false);
   const [value, setValue] = useState("0");

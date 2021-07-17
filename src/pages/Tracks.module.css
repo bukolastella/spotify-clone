@@ -2,3 +2,10 @@
   background-color: rgba(0, 0, 0, 0.952);
   padding: 1rem;
 }
+.Loader {
+  width: 100%;
+  height: calc(100vh - 148px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
