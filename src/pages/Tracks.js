@@ -19,7 +19,6 @@ const Tracks = () => {
   const [trackState, setTrackState] = useState([]);
   const [errorState, setErrorState] = useState(false);
   const [trackLoadingState, setTrackLoadingErrorState] = useState(false);
-
   useEffect(() => {
     const fetchData = async () => {
       dispatch(homeActions.setLoading(true));
@@ -29,8 +28,8 @@ const Tracks = () => {
         {
           method: "GET",
           headers: {
-            "x-rapidapi-key": process.env.REACT_KEY,
-            "x-rapidapi-host": process.env.REACT_HOST,
+            "x-rapidapi-key": process.env.REACT_APP_KEY,
+            "x-rapidapi-host": process.env.REACT_APP_HOST,
           },
         }
       );
