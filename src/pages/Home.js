@@ -10,7 +10,6 @@ import ErrorModal from "../components/errorModal/ErrorModal";
 const Home = () => {
   const [errorState, setErrorState] = useState(false);
   const dispatch = useDispatch();
-
   useEffect(() => {
     const fetchData = async () => {
       dispatch(homeActions.setLoading(true));

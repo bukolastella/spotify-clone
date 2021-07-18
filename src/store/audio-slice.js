@@ -20,6 +20,15 @@ const audioSlice = createSlice({
     setPlaying(state) {
       state.audioData.playing = !state.audioData.playing;
     },
+    clearMusic(state) {
+      state.audioData = {
+        playing: true,
+        url: "",
+        currentSongPic: "",
+        currentSongTitle: "",
+        currentSongArtist: "",
+      };
+    },
   },
 });
 

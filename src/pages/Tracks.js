@@ -19,6 +19,7 @@ const Tracks = () => {
   const [trackState, setTrackState] = useState([]);
   const [errorState, setErrorState] = useState(false);
   const [trackLoadingState, setTrackLoadingErrorState] = useState(false);
+
   useEffect(() => {
     const fetchData = async () => {
       dispatch(homeActions.setLoading(true));
@@ -59,6 +60,7 @@ const Tracks = () => {
   const reveal = trackState.map((ev, i) => (
     <TrackRow data={trackState[i]} key={ev.id} />
   ));
+
   return (
     <>
       <Nav />

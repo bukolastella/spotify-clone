@@ -19,17 +19,6 @@ function App() {
             <Tracks />
           </Route>
           <Route path="*">
-            {/* <p
-            style={{
-              color: "white",
-              textAlign: "center",
-              paddingTop: "3rem",
-              margin: "auto",
-              width: "200px",
-            }}
-          >
-            Page not found
-          </p> */}
             <Redirect to="/" />
           </Route>
         </Switch>

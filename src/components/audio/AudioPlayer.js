@@ -13,13 +13,23 @@ const AudioPlayer = (props) => {
   const [mute, setMute] = useState(false);
   const [value, setValue] = useState("0");
   const [volValue, setVolValue] = useState("50");
+  const [, setState] = useState({});
 
+  useEffect(() => {
+    return () => {
+      setState({});
+    };
+  }, []);
   useEffect(() => {
     setAudio(new Audio(`${musicState.preview_url}`));
     audio.pause();
     setProgress("0");
     setLoading(true);
+    return () => {
+      audio.pause();
+    };
   }, [musicState.preview_url]); // eslint-disable-line react-hooks/exhaustive-deps
+
   const toggle = () => {
     if (loading) return;
     setPlaying(!playing);
@@ -27,6 +37,9 @@ const AudioPlayer = (props) => {
 
   useEffect(() => {
     playing ? audio.play() : audio.pause();
+    return () => {
+      audio.pause();
+    };
   }, [playing, audio]);
 
   useEffect(() => {
@@ -51,7 +64,7 @@ const AudioPlayer = (props) => {
       value +
       "%, gray 100%)";
     setValue(background);
-  }, [audio.currentTime]);
+  }, [audio.currentTime, audio]);
   const calculateTime = (secs) => {
     const minutes = Math.floor(secs / 60);
     const seconds = Math.floor(secs % 60);

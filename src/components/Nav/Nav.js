@@ -10,13 +10,12 @@ const Nav = () => {
   const submitHandler = (event) => {
     event.preventDefault();
     if (inputState === " ") {
-      console.log(inputState);
       setInputState("");
       setInputErrorState(true);
       return;
     }
     setInputErrorState(false);
-    history.push(`/search/${inputState}/tracks`);
+    history.push(`/search/${inputState}`);
   };
   return (
     <div className={classes.Nav}>
@@ -28,7 +27,7 @@ const Nav = () => {
       </div>
 
       <div className={classes.NavArrow}>
-        <div onClick={() => window.history.back()}>
+        <div onClick={() => history.push("/")}>
           <i className="fas fa-chevron-left"></i>
         </div>
         <div onClick={() => window.history.forward()}>
