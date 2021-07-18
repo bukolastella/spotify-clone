@@ -1,10 +1,12 @@
 .Nav {
-  background-color: rgba(0, 0, 0, 0.863);
+  background-color: #181818;
+  /* background-color: rgba(0, 0, 0, 0.863); */
   padding: 1.3rem 2rem;
   display: grid;
   width: 100%;
   grid-template-columns: 1fr 2fr 2fr;
   align-items: center;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.603);
 }
 .NavLogo {
   text-transform: capitalize;
@@ -104,7 +106,7 @@
     flex-direction: column;
   }
   .Nav {
-    padding: 1rem;
+    padding: 1.5rem 1rem;
   }
 
   .NavForm span {

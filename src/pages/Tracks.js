@@ -22,6 +22,7 @@ const Tracks = () => {
 
   useEffect(() => {
     const fetchData = async () => {
+      setErrorState(false);
       dispatch(homeActions.setLoading(true));
       setTrackLoadingErrorState(true);
       const response = await fetch(
